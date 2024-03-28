@@ -6,6 +6,24 @@ public class Employee {
     private String position;
     private Integer salary;
 
+    public Employee(String name, String position, Integer salary) {
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Employee employee = new Employee("Hamdan", "CEO", 12000);
+
+        System.out.println("Employee is :" + employee.name);
+        System.out.println("His Position is :" + employee.position);
+        System.out.println("Salary is :" + employee.salary);
+
+
+    }
+
     public String getName() {
         return name;
     }
@@ -28,24 +46,6 @@ public class Employee {
 
     public void setSalary(Integer salary) {
         this.salary = salary;
-    }
-
-    public Employee(String name, String position, Integer salary) {
-        this.name = name;
-        this.position = position;
-        this.salary = salary;
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        Employee employee = new Employee("Hamdan", "CEO", 12000);
-
-        System.out.println("Employee is :"+ employee.name);
-        System.out.println("His Position is :"+ employee.position);
-        System.out.println("Salary is :" + employee.salary);
-
-
     }
 }
 

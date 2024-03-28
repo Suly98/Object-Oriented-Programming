@@ -65,7 +65,7 @@ public class BankAccount {
         } else{
             System.out.println("Thanks for visiting our Bank! ");
         }
-
+        sc.close();
     }
 }
 

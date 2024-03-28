@@ -26,7 +26,12 @@ public class Books {
 
 
     public static void main(String[] args) {
-        
+    //create a new book
+        Books myBook = new Books("The Dark Truth about AI", "Sulaiman", 2030);
+
+        System.out.println("Title : " + myBook.getTitle());
+        System.out.println("The Author is : " + myBook.getAuthor());
+        System.out.println("Publication Year : " + myBook.getPublicationYear());
 
     }
 }

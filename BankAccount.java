@@ -5,6 +5,12 @@ public class BankAccount {
     private Float balance;
     private String ownerName;
 
+    public BankAccount(String accountNumber, Float balance, String ownerName) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.ownerName = ownerName;
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -31,20 +37,21 @@ public class BankAccount {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        BankAccount account = new BankAccount();
 
         System.out.println("Enter your account number: ");
-        account.accountNumber = sc.next();
+        String accountNumber = sc.next();
 
         System.out.println("Enter your balance: ");
-        account.balance = sc.nextFloat();
+        Float balance = sc.nextFloat();
 
         System.out.println("Enter your name: ");
-        account.ownerName = sc.next();
+        String ownerName = sc.next();
+
+        BankAccount account = new BankAccount(accountNumber, balance, ownerName);
 
         System.out.println("Would you like to withdraw anything from you account? (y/n) ");
 
-        if(sc.next().equals("y")){
+        if(sc.next().equalsIgnoreCase("y")){
             System.out.println("Please, enter the amount that you want to withdraw: ");
             Float amountWithdrawed = sc.nextFloat();
 

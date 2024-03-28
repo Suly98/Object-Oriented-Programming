@@ -33,7 +33,7 @@ public class Circle {
         Circle circle = new Circle(sc.nextFloat(), "Green");
 
         Double area= Math.PI* Math.pow(circle.radius, 2);
-        System.out.println("Th");
+        System.out.println("Area of Circle is: "+ area);
 
     }
 }
